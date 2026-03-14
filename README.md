@@ -7,6 +7,9 @@ The application enables administrators to create, update, and manage advising sc
 
 This project was developed as a **collaborative academic project**.
 
+## System Type
+Desktop administrative application for advising schedule management.
+
 **My Contributions**
 
 * Designed backend domain models using **C# and .NET**
@@ -98,7 +101,7 @@ Run the application from the IDE.
 Run the compiled executable:
 
 ```
-/obj/debug/B321_Project.exe
+/bin/Debug/B321_Project.exe
 ```
 
 ---
