@@ -1,40 +1,109 @@
-# Calenvisor - Administrative Advising Schedule Management System
+# Calenvisor – Administrative Advising Schedule Management System
 
-## About
-Calenvisor is a comprehensive admin interface designed for managing student advising schedules. This application empowers administrators to efficiently create,
-read, update, and delete student appointment records across the entire advising ecosystem. 
+## Overview
 
-## Features
-_The application is built around five interconnected database tables, each with dedicated management capabilities._
+Calenvisor is an administrative scheduling system designed to manage student advising appointments across an academic environment.
+The application enables administrators to create, update, and manage advising schedules while ensuring scheduling conflicts are prevented and relational data remains consistent.
+
+This project was developed as a **collaborative academic project**.
+
+**My Contributions**
+
+* Designed backend domain models using **C# and .NET**
+* Implemented database interaction utilities for **SQL Server**
+* Enforced scheduling integrity through backend validation and database constraints to prevent double-booking
+* Helped design the relational schema connecting students, advisors, locations, availability, and meetings
+
+---
+
+## Tech Stack
+
+* **Language:** C#
+* **Framework:** .NET
+* **Database:** SQL Server
+* **Development Environment:** Visual Studio
+* **Architecture:** Object-oriented backend with database utility layer
+
+---
+
+## Core Features
 
 ### Students
-Maintain the students' roster with CRUD functionality such as adding new students, updating existing records, or removing entries from the database as needed.
+
+Maintain a roster of students with full CRUD functionality, allowing administrators to add, update, or remove records from the advising system.
 
 ### Advisors
-Manage your advising staff with the same comprehensive controls available for student records, including adding, editing, and removing advisor profiles.
+
+Manage advisor profiles and maintain accurate records for staff responsible for advising appointments.
 
 ### Locations
-Configure and update appointment venues by specifying buildings and room assignments, ensuring accurate location tracking for all advising sessions.
 
-### Availability 
-View and manage all unscheduled appointment slots. Create new time slots, modify existing availabilities, and maintain an up-to-date calendar of open appointments. 
+Configure appointment venues including buildings and room assignments to ensure accurate scheduling information.
+
+### Availability
+
+Create and manage open advising time slots. Administrators can modify availability to maintain an accurate calendar of open appointments.
 
 ### Meetings
-Schedule and assign students to their advising appointments. Define appointment types, add custom labels, and create the connections between students, advisors, and available time slots.
 
-## Things to Set Up before running
-### Execute the database
-_The application requires a database backend. All necessary SQL files are located in the /backend/ directory (Populate and Procedures)_
+Schedule advising sessions by connecting students, advisors, and available time slots. The system enforces validation rules to prevent scheduling conflicts.
 
-### Running the Interface
-There are two options for running the interface
+---
 
-### Option 1: Development Environment
-Open and run the project using Visual Studio by loading the /B321_Project/ directory.
+## Database Structure
 
-### Option 2: Standalone Executable
-For direct execution without Visual Studio, navigate to: /obj/debug/B321_Project.exe.
+The application is built on a **five-table relational schema**:
 
+* Students
+* Advisors
+* Locations
+* Availability
+* Meetings
 
-## Architecture
-Calenvisor provides a seamless administrative experience through its integrated five-table relational structure, ensuring data consistency and operational efficiency across all advising management workflows.
+These tables are connected through relational constraints to ensure **data consistency and scheduling integrity**.
+
+---
+
+## Running the Application
+
+### 1. Configure the Database
+
+All SQL setup scripts are located in:
+
+```
+/backend/
+```
+
+Run the following scripts:
+
+* Populate scripts
+* Stored procedure scripts
+
+---
+
+### 2. Run the Application
+
+**Option 1 — Development Environment**
+
+Open the project in **Visual Studio**:
+
+```
+/B321_Project/
+```
+
+Run the application from the IDE.
+
+**Option 2 — Standalone Executable**
+
+Run the compiled executable:
+
+```
+/obj/debug/B321_Project.exe
+```
+
+---
+
+## Architecture Notes
+
+The system separates application logic from database operations through a centralized database utility layer.
+Backend validation and relational constraints ensure that advising appointments cannot be double-booked while maintaining referential integrity across the system.
