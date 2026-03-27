@@ -1,21 +1,27 @@
 # Calenvisor – Administrative Advising Schedule Management System
 
 ## Overview
+Calenvisor is an administrative scheduling system for managing student advising appointments in an academic environment. The system enables administrators to create, update, and manage schedules while enforcing business rules to prevent conflicts and maintain data integrity.
 
-Calenvisor is an administrative scheduling system designed to manage student advising appointments across an academic environment.
-The application enables administrators to create, update, and manage advising schedules while ensuring scheduling conflicts are prevented and relational data remains consistent.
-
-This project was developed as a **collaborative academic project**.
+This project was developed collaboratively, with a focus on backend system design and scheduling logic.
 
 ## System Type
 Desktop administrative application for advising schedule management.
 
-**My Contributions**
+## My Contributions
 
-* Designed backend domain models using **C# and .NET**
-* Implemented database interaction utilities for **SQL Server**
-* Enforced scheduling integrity through backend validation and database constraints to prevent double-booking
-* Helped design the relational schema connecting students, advisors, locations, availability, and meetings
+- Designed and implemented backend domain models using C# and .NET  
+- Developed database interaction utilities for SQL Server using parameterized queries and stored procedures  
+- Implemented backend validation logic and database constraints to enforce scheduling integrity and prevent double-booking  
+- Contributed to relational schema design connecting students, advisors, locations, availability, and meetings
+  
+---
+
+## Key Engineering Focus
+- Backend development with C#/.NET and SQL Server  
+- Designing and enforcing business logic for scheduling systems  
+- Relational database modeling and data integrity  
+- Preventing scheduling conflicts through application and database-level validation
 
 ---
 
@@ -49,7 +55,7 @@ Create and manage open advising time slots. Administrators can modify availabili
 
 ### Meetings
 
-Schedule advising sessions by connecting students, advisors, and available time slots. The system enforces validation rules to prevent scheduling conflicts.
+Schedule advising sessions by connecting students, advisors, and available time slots. The system enforces backend validation logic and database constraints to prevent scheduling conflicts and ensure consistency.
 
 ---
 
