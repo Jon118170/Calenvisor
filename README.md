@@ -1,7 +1,7 @@
 # Calenvisor – Administrative Advising Schedule Management System
 
 ## Overview
-Calenvisor is an administrative scheduling system for managing student advising appointments in an academic environment. The system enables administrators to create, update, and manage schedules while enforcing business rules to prevent conflicts and maintain data integrity.
+Calenvisor is an administrative scheduling system for managing and coordinating student advising appointments in an academic environment. The system enables administrators to create, update, and manage schedules while enforcing business rules to prevent conflicts and maintain data integrity.
 
 This project was developed collaboratively, with a focus on backend system design and scheduling logic.
 
@@ -31,7 +31,7 @@ Desktop administrative application for advising schedule management.
 * **Framework:** .NET
 * **Database:** SQL Server
 * **Development Environment:** Visual Studio
-* **Architecture:** Object-oriented backend with database utility layer
+* **Architecture:** Layered, object-oriented backend with centralized database utility layer
 
 ---
 
@@ -114,5 +114,5 @@ Run the compiled executable:
 
 ## Architecture Notes
 
-The system separates application logic from database operations through a centralized database utility layer.
-Backend validation and relational constraints ensure that advising appointments cannot be double-booked while maintaining referential integrity across the system.
+The system separates application logic from database operations through a centralized database utility layer, improving maintainability and separation of concerns.  
+Backend validation and relational constraints work together to enforce business rules, ensuring advising appointments cannot be double-booked while preserving referential integrity across the system.
